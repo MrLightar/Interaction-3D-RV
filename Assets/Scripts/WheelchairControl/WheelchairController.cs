@@ -38,6 +38,7 @@ public class WheelchairController : MonoBehaviour {
 		velocity += Physics.gravity * Time.deltaTime;
 
 		cc.Move((velocity + desiredMove + slideForce) * Time.deltaTime);
+
 	}
 
 }
