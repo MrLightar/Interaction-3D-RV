@@ -49,8 +49,8 @@ public class WheelchairController : MonoBehaviour {
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         Debug.Log(movement);
-        rightWheel.AddForce(movement * 100.0f);
-        leftWheel.AddForce(movement * 100.0f);
+        //rightWheel.AddForce(movement * 100.0f);
+        //leftWheel.AddForce(movement * 100.0f);
     }
 
 }
