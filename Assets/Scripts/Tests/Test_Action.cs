@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Test_Action : MonoBehaviour
 {
+	public GameObject prefabTest;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,9 @@ public class Test_Action : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.layer == 10) {
+			Debug.Log("Touched " + name);		
 			if (OVRInput.GetDown(OVRInput.Button.One)) {
-				Debug.Log("Touched");
+				Instantiate(prefabTest);
 			}
 		}
 	}
