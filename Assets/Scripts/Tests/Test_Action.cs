@@ -5,26 +5,23 @@ using UnityEngine;
 public class Test_Action : MonoBehaviour
 {
 	public GameObject prefabTest;
+	private bool playerIn;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Update()
+	{
+		if (playerIn && (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Three))) {
+			Instantiate(prefabTest);
+		}
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.layer == 10) {
-			Debug.Log("Touched " + name);		
-			if (OVRInput.GetDown(OVRInput.Button.One)) {
-				Instantiate(prefabTest);
-			}
-		}
+		playerIn = true;
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		playerIn = false;
 	}
 }
