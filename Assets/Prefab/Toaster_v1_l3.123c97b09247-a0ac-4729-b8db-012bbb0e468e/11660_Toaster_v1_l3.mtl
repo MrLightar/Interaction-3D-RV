@@ -1,0 +1,36 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 21.11.2011 11:09:48
+
+newmtl metal_1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka 11660_Toaster_v1_diffuse.JPG
+	map_Kd 11660_Toaster_v1_diffuse.JPG
+	map_Ks 11660_Toaster_v1_specular.JPG
+	map_bump 11660_Toaster_v1_bump.JPG
+	bump 11660_Toaster_v1_bump.JPG
+
+newmtl plastic_1
+	Ns 39.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.6750 0.6750 0.6750
+	Ke 0.0000 0.0000 0.0000
+	map_Ka 11660_Toaster_v1_diffuse.JPG
+	map_Kd 11660_Toaster_v1_diffuse.JPG
+	map_Ks 11660_Toaster_v1_specular.JPG
+	map_bump 11660_Toaster_v1_bump.JPG
+	bump 11660_Toaster_v1_bump.JPG
