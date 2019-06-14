@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test_Grab.unity
-    guid: 3b9c075da01ba54458fc8c3d48e33047
-  - enabled: 1
     path: Assets/Scenes/Test_Push.unity
     guid: fbffc9601b9b30d489df2609ace6db6e
-  - enabled: 1
-    path: Assets/Scenes/Test_Activation.unity
-    guid: 4ece2298fdb6d85429bb6b948a8c349b
   m_configObjects: {}
