@@ -453,25 +453,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4902831796083700945, guid: 8a7d7c5af73c69b45b4dfaceab9b5583,
-        type: 3}
-      propertyPath: rightHand
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902831796083700945, guid: 8a7d7c5af73c69b45b4dfaceab9b5583,
-        type: 3}
-      propertyPath: leftHand
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902831796083700945, guid: 8a7d7c5af73c69b45b4dfaceab9b5583,
-        type: 3}
-      propertyPath: rightWheel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902831796083700945, guid: 8a7d7c5af73c69b45b4dfaceab9b5583,
-        type: 3}
-      propertyPath: leftWheel
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a7d7c5af73c69b45b4dfaceab9b5583, type: 3}
