@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class WheelchairControl : MonoBehaviour
 {
-    public WheelInfo motorWheel; // the information about each individual axle
-    public float maxMotorTorque; // maximum torque the motor can apply to wheel
-    public float maxSteeringAngle; // maximum steer angle the wheel can have
+
+    public bool vrControl = false;
+
+    public GameObject rightHand;
+    public GameObject leftHand;
+
+    public GameObject rightWheel;
+    public GameObject leftWheel;
 
     private Rigidbody rb;
 
@@ -17,62 +22,48 @@ public class WheelchairControl : MonoBehaviour
 
     public void FixedUpdate()
     {
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
-
-        //foreach (WheelInfo wheelInfo in wheelInfos)
-        //{
-        //    if (wheelInfo.steering)
-        //    {
-        //        wheelInfo.leftWheel.steerAngle = steering;
-        //        wheelInfo.rightWheel.steerAngle = steering;
-        //    }
-        //    if (wheelInfo.motor)
-        //    {
-        //        wheelInfo.leftWheel.motorTorque = motor;
-        //        wheelInfo.rightWheel.motorTorque = motor;
-        //    }
-        //}
-        if(motor != 0)
+        Vector3 forceRight = new Vector3();
+        Vector3 forceLeft = new Vector3();
+        if (!vrControl)
         {
-            motorWheel.rightWheel.motorTorque = motor;
-            motorWheel.leftWheel.motorTorque = motor;
-        }
+            float rightForce = Input.GetAxis("Vertical");
+            float leftForce = Input.GetAxis("Horizontal");
+            
+            if (rightForce != 0)
+            {
+                forceRight = transform.forward * 50.0f * rightForce;
+                rb.AddForceAtPosition(new Vector3(forceRight.x, 0, forceRight.z), new Vector3(rightWheel.transform.position.x, rb.position.y, rightWheel.transform.position.z));
+                Debug.DrawRay(rightWheel.transform.position, forceRight, Color.blue);
+            }
+            if (leftForce != 0)
+            {
+                forceLeft = transform.forward * 50.0f * leftForce;
+                rb.AddForceAtPosition(forceLeft, leftWheel.transform.position);
 
-        //if(steering > 0)
-        //{
-        //    motorWheel.rightWheel.motorTorque = steering;
-        //}
-        //else
-        //{
-        //    if(steering < 0)
-        //    {
-        //        motorWheel.leftWheel.motorTorque = steering;
-        //    } else
-        //    {
-        //    }
-        //}
+                Debug.DrawRay(leftWheel.transform.position, forceLeft, Color.red);
+            }
+            this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y, 0);
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        } else
         {
-            //rb.velocity = Vector3.zero;
-            //motorWheel.rightWheel.motorTorque = -motorWheel.rightWheel.motorTorque;
-            //motorWheel.leftWheel.motorTorque = -motorWheel.rightWheel.motorTorque;
+            //main droite
+            if (OVRInput.Get(OVRInput.Button.One))
+            {
+                forceRight = transform.forward * 1000.0f * rightHand.GetComponent<Rigidbody>().velocity.z;
+                rb.AddForceAtPosition(new Vector3(forceRight.x, 0, forceRight.z), new Vector3(rightWheel.transform.position.x, rb.position.y, rightWheel.transform.position.z));
+            }
+            //main gauche
+            if (OVRInput.Get(OVRInput.Button.Three))
+            {
+                forceLeft = transform.forward * 1000.0f * leftHand.GetComponent<Rigidbody>().velocity.z;
+                rb.AddForceAtPosition(new Vector3(forceLeft.x, 0, forceLeft.z), new Vector3(leftWheel.transform.position.x, rb.position.y, leftWheel.transform.position.z));
+            }
         }
 
         
+
     }
 }
 
-[System.Serializable]
-public class WheelInfo
-{
-    public WheelCollider leftWheel;
-    public WheelCollider rightWheel;
-    public bool motor; // is this wheel attached to motor?
-    public bool steering; // does this wheel apply steer angle?
-    public bool rightWheelMotor = false;
-    public bool leftWheelMotor = false;
-}
 
 
