@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Tuto_Scene.unity
     guid: 3b9c075da01ba54458fc8c3d48e33047
+=======
+    path: Assets/Scenes/Test_Push.unity
+    guid: fbffc9601b9b30d489df2609ace6db6e
+>>>>>>> dylan
   m_configObjects: {}
