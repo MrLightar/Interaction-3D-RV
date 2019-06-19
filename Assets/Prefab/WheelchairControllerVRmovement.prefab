@@ -256,7 +256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231160090024513315}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0.325, z: -0.6}
+  m_LocalPosition: {x: -0.6, y: 0.65, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 231160089940623724}
@@ -414,7 +414,7 @@ BoxCollider:
   m_GameObject: {fileID: 231160090036923435}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -596,7 +596,7 @@ BoxCollider:
   m_GameObject: {fileID: 231160090727679214}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -625,7 +625,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231160090837113380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -0.1625, z: 0.3}
+  m_LocalPosition: {x: -0.4, y: 0.15, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 231160089912200540}
@@ -687,7 +687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231160090978455043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -0.1625, z: 0.3}
+  m_LocalPosition: {x: 0.4, y: 0.15, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 231160091797368508}
@@ -733,6 +733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 231160091444056391}
+  - component: {fileID: 569706620}
   m_Layer: 0
   m_Name: BodyWheelchair
   m_TagString: Untagged
@@ -748,7 +749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231160091444056390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.675, z: -0.6}
+  m_LocalPosition: {x: 0, y: 1, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 231160090678996144}
@@ -757,6 +758,19 @@ Transform:
   m_Father: {fileID: 231160091549772078}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &569706620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231160091444056390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &231160091549772075
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231160091549772075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.325, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 231160091444056391}
@@ -801,8 +815,8 @@ Rigidbody:
   m_GameObject: {fileID: 231160091549772075}
   serializedVersion: 2
   m_Mass: 150
-  m_Drag: 2
-  m_AngularDrag: 2
+  m_Drag: 1.5
+  m_AngularDrag: 5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -821,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrControl: 1
+  velocityTweak: 150
   rightHand: {fileID: 7571066499737332621}
   leftHand: {fileID: 7571754567934790460}
   rightWheel: {fileID: 231160091645833994}
@@ -850,7 +865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231160091645833994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.325, z: -0.6}
+  m_LocalPosition: {x: 0.6, y: 0.65, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 231160089942162994}
@@ -984,7 +999,7 @@ PrefabInstance:
     - target: {fileID: 7906514258418400283, guid: f211d92cb01fded4fa220db16e82ff3f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.675
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7906514258418400283, guid: f211d92cb01fded4fa220db16e82ff3f,
         type: 3}
