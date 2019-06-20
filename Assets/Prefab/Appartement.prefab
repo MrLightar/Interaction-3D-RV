@@ -3824,7 +3824,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &7606736657466402396
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59525,6 +59525,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6707967970063124403, guid: 3a6957c6953dd224da15b7bef0843a0c,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a6957c6953dd224da15b7bef0843a0c, type: 3}
 --- !u!4 &3236463598936730091 stripped
@@ -59789,6 +59794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mug (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449789435656421869, guid: 4bcc0e5f91226d9469a5ec550985f274,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1449789435656421869, guid: 4bcc0e5f91226d9469a5ec550985f274,
         type: 3}
@@ -61391,31 +61401,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.00000029616052
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.000000089406946
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.99839103
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.05670529
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 173.49901
-      objectReference: {fileID: 0}
     - target: {fileID: 2593922913500368022, guid: 095b1aafcd3ea454abb2e77be88460b7,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -62121,21 +62106,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.57300436
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8195523
-      objectReference: {fileID: 0}
-    - target: {fileID: 2915777882562809044, guid: 095b1aafcd3ea454abb2e77be88460b7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 69.92
       objectReference: {fileID: 0}
     - target: {fileID: 2593922913500368022, guid: 095b1aafcd3ea454abb2e77be88460b7,
         type: 3}
@@ -64157,12 +64127,12 @@ PrefabInstance:
     - target: {fileID: 2351994480282741173, guid: f45b5deb63aaaeb468000b52004d4e7b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.527
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 2351994480282741173, guid: f45b5deb63aaaeb468000b52004d4e7b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.095
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2351994480282741173, guid: f45b5deb63aaaeb468000b52004d4e7b,
         type: 3}
@@ -66143,6 +66113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 42.407
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492661408927354808, guid: 8ab32064244be3a49a5da8685ad3d891,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ab32064244be3a49a5da8685ad3d891, type: 3}
