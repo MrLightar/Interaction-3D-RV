@@ -25059,6 +25059,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Appartement
       objectReference: {fileID: 0}
+    - target: {fileID: 1006873648, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835710369, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7606736658087771606, guid: 7f7224d7c9537eb4487545b33ea3ab53,
         type: 3}
       propertyPath: m_LocalPosition.x
