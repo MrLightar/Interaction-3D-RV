@@ -34,6 +34,7 @@ public class toasterDetect : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             other.gameObject.GetComponent<Rigidbody>().freezeRotation = true;
             other.gameObject.GetComponent<BoxCollider>().enabled = false;
+
             if (toastUsed == 0)
             {
                 other.gameObject.transform.SetPositionAndRotation(new Vector3(16.15f, 2.425f, 14.32f), Quaternion.Euler(90,0,0));
@@ -41,7 +42,7 @@ public class toasterDetect : MonoBehaviour
             } else
             {
                 other.gameObject.transform.SetPositionAndRotation(new Vector3(16.15f, 2.425f, 14.42f), Quaternion.Euler(90, 0, 0));
-                GameManager.Instance.isToasted = true;
+                GameManager.Instance.toastPlaced = true;
             }
             
             toastUsed++;
