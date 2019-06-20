@@ -4,40 +4,49 @@ using UnityEngine;
 
 public class SwitchManager : MonoBehaviour
 {
-    public List<GameObject> lights;
+	public List<GameObject> lights;
+	public GameObject onButton;
+	public GameObject offButton;
 
-    private bool IsOn = false;
+	private bool IsOn = false;
+	private bool playerIn = false;
 
-    private void Start()
-    {
-        
-    }
 
-    private void Update()
-    {
-        if(true)
-        {
-            SwitchLight();
-        }
-    }
+	private void Update()
+	{
+		if (playerIn && (OVRInput.GetDown(OVRInput.Button.Two) || OVRInput.GetDown(OVRInput.Button.Four))) {
+			SwitchLight();
+		}
+	}
 
-    public void SwitchLight()
-    {
-        if (IsOn == false)
-        {
-            foreach (GameObject light in lights)
-            {
-                light.SetActive(true);
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Hand") {
+			playerIn = true;
+		}
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.tag == "Hand") {
+			playerIn = false;
+		}
+	}
+
+	public void SwitchLight()
+	{
+		if (IsOn == false) {
+			foreach (GameObject light in lights) {
+				light.SetActive(true);
+				onButton.SetActive(true);
             }
-        }
-        else
-        {
-            foreach (GameObject light in lights)
-            {
-                light.SetActive(false);
-            }
-        }
+		} else {
+			foreach (GameObject light in lights) {
+				light.SetActive(false);
+				onButton.SetActive(false);
+			}
+		}
 
-        
-    }
+		IsOn = !IsOn;
+	}
 }
