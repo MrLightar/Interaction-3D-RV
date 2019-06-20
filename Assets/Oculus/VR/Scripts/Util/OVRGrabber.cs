@@ -364,7 +364,28 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
-	protected virtual void OffhandGrabbed(OVRGrabbable grabbable)
+    public virtual void GrabVolumeEnableUse(bool enabled)
+    {
+        if (m_grabVolumeEnabled == enabled)
+        {
+            return;
+        }
+
+        m_grabVolumeEnabled = enabled;
+        for (int i = 0; i < m_grabVolumes.Length; ++i)
+        {
+            Collider grabVolume = m_grabVolumes[i];
+            grabVolume.enabled = m_grabVolumeEnabled;
+        }
+
+        if (!m_grabVolumeEnabled)
+        {
+            m_grabCandidates.Clear();
+        }
+        GrabEnd();
+    }
+
+    protected virtual void OffhandGrabbed(OVRGrabbable grabbable)
     {
         if (m_grabbedObj == grabbable)
         {
