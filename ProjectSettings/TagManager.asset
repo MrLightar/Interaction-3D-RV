@@ -8,6 +8,13 @@ TagManager:
   - Mug
   - toothBrush
   - Hand
+  - Trigger1
+  - Trigger2
+  - Trigger3
+  - Trigger4
+  - Trigger5
+  - Trigger6
+  - Trigger7
   layers:
   - Default
   - TransparentFX
