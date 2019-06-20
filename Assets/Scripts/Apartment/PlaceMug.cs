@@ -19,11 +19,13 @@ public class PlaceMug : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Mug") {
+            other.gameObject.GetComponent<MeshCollider>().enabled= false;
+            other.gameObject.GetComponent<Rigidbody>().useGravity = false;
 			other.gameObject.GetComponent<OVRGrabbable>().enabled = false;
-			other.gameObject.isStatic = true;
 
-			other.transform.position = new Vector3(15.8f, 20.22f, 18.7f);
-			other.transform.eulerAngles = new Vector3(-90, 0, -90);
+            other.transform.localPosition = new Vector3(15.835f, 0.22f, 18.74f);
+			other.transform.eulerAngles = new Vector3(-90, 0, -60);
+			other.gameObject.isStatic = true;
 		}
 	}
 }
