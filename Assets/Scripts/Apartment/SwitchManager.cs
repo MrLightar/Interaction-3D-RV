@@ -39,13 +39,15 @@ public class SwitchManager : MonoBehaviour
 			foreach (GameObject light in lights) {
 				light.SetActive(true);
 				onButton.SetActive(true);
+                offButton.SetActive(false);
             }
 		} else {
 			foreach (GameObject light in lights) {
 				light.SetActive(false);
 				onButton.SetActive(false);
-			}
-		}
+                offButton.SetActive(true);
+            }
+        }
 
 		IsOn = !IsOn;
 	}
