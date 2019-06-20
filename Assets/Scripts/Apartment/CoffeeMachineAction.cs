@@ -6,18 +6,20 @@ public class CoffeeMachineAction : MonoBehaviour
 {
 	private AudioSource audioSource;
 	private bool playerIn;
+	private bool actionDone;
 
 
 	private void Start()
 	{
 		audioSource = GetComponent<AudioSource>();
+		actionDone = false;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		if (playerIn && (OVRInput.GetDown(OVRInput.Button.Two) || OVRInput.GetDown(OVRInput.Button.Four))) {
-			if (GameManager.Instance.coffeeCupPut) {
+			if (GameManager.Instance.coffeeCupPut && !actionDone) {
 				Action();
 			}
 		}
@@ -41,6 +43,7 @@ public class CoffeeMachineAction : MonoBehaviour
 	private void Action()
 	{
 		audioSource.Play();
+		actionDone = true;
 		GameManager.Instance.coffeeMade = true;
 	}
 }

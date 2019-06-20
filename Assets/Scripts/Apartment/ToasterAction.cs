@@ -6,10 +6,12 @@ public class ToasterAction : MonoBehaviour
 {
 	private AudioSource audioSource;
 	private bool playerIn;
+	private bool actionDone;
 
 
 	private void Start()
 	{
+		actionDone = false;
 		audioSource = GetComponent<AudioSource>();
 	}
 
@@ -17,7 +19,7 @@ public class ToasterAction : MonoBehaviour
 	void Update()
 	{
 		if (playerIn && (OVRInput.GetDown(OVRInput.Button.Two) || OVRInput.GetDown(OVRInput.Button.Four))) {
-			if (GameManager.Instance.toastPlaced) {
+			if (GameManager.Instance.toastPlaced && !actionDone) {
 				Action();
 			}
 		}
@@ -40,6 +42,7 @@ public class ToasterAction : MonoBehaviour
 	private void Action()
 	{
 		audioSource.Play();
+		actionDone = true;
 		GameManager.Instance.isToasted = true;
 	}
 }
