@@ -6,6 +6,7 @@ TagManager:
   tags:
   - bread
   - Mug
+  - Hand
   layers:
   - Default
   - TransparentFX
