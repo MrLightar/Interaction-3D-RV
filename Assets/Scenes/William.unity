@@ -15258,6 +15258,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1155443036}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1155443039 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4324069419930896990, guid: 8a7d7c5af73c69b45b4dfaceab9b5583,
+    type: 3}
+  m_PrefabInstance: {fileID: 1155443036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1179131384
 Mesh:
   m_ObjectHideFlags: 0
@@ -26640,23 +26646,23 @@ PrefabInstance:
     - target: {fileID: 659029652, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
       propertyPath: playerHead
       value: 
-      objectReference: {fileID: 610672579}
+      objectReference: {fileID: 1155443039}
     - target: {fileID: 1006873653, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
       propertyPath: playerHead
       value: 
-      objectReference: {fileID: 610672579}
+      objectReference: {fileID: 1155443039}
     - target: {fileID: 1297659059, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
       propertyPath: playerHead
       value: 
-      objectReference: {fileID: 610672579}
+      objectReference: {fileID: 1155443039}
     - target: {fileID: 1176045447, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
       propertyPath: playerHead
       value: 
-      objectReference: {fileID: 610672579}
+      objectReference: {fileID: 1155443039}
     - target: {fileID: 1835710374, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
       propertyPath: playerHead
       value: 
-      objectReference: {fileID: 610672579}
+      objectReference: {fileID: 1155443039}
     - target: {fileID: 1951340758, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
       propertyPath: playerHead
       value: 
@@ -26664,6 +26670,17 @@ PrefabInstance:
     - target: {fileID: 1929775445, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
       propertyPath: playerHead
       value: 
-      objectReference: {fileID: 610672579}
-    m_RemovedComponents: []
+      objectReference: {fileID: 1155443039}
+    - target: {fileID: 8492687540801843433, guid: 7f7224d7c9537eb4487545b33ea3ab53,
+        type: 3}
+      propertyPath: playerHead
+      value: 
+      objectReference: {fileID: 1155443039}
+    - target: {fileID: 6195024260514043177, guid: 7f7224d7c9537eb4487545b33ea3ab53,
+        type: 3}
+      propertyPath: playerHead
+      value: 
+      objectReference: {fileID: 1155443039}
+    m_RemovedComponents:
+    - {fileID: 1951340758, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f7224d7c9537eb4487545b33ea3ab53, type: 3}
