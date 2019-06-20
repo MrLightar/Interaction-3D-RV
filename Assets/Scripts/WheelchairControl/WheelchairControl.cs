@@ -49,8 +49,8 @@ public class WheelchairControl : MonoBehaviour
         {
             Vector3 rightLocalVelocity = transform.InverseTransformDirection(rightHand.GetComponent<Rigidbody>().velocity);
             Vector3 leftLocalVelocity = transform.InverseTransformDirection(leftHand.GetComponent<Rigidbody>().velocity);
-            Debug.Log("right : " + rightHand.GetComponent<Rigidbody>().velocity);
-            Debug.Log("left : " + leftHand.GetComponent<Rigidbody>().velocity);
+            //Debug.Log("right : " + rightHand.GetComponent<Rigidbody>().velocity);
+            //Debug.Log("left : " + leftHand.GetComponent<Rigidbody>().velocity);
             //main droite
             if (OVRInput.Get(OVRInput.Button.One))
             {
