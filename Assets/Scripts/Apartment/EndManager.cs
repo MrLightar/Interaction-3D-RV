@@ -7,6 +7,8 @@ public class EndManager : MonoBehaviour
     public GameObject onButton;
     public GameObject offButton;
 
+    public GameObject VRCamera;
+
     private bool playerIn = false;
 
 
@@ -45,6 +47,16 @@ public class EndManager : MonoBehaviour
     {
         onButton.SetActive(false);
         offButton.SetActive(true);
+        VRCamera.GetComponent<OVRScreenFade>().FadeOut();
+        StartCoroutine("Waitingend");
+        
 
+    }
+
+    IEnumerator Waitingend()
+    {
+        yield return new WaitForSeconds(5.0f);
+        Debug.Log("mal a la main");
+        Application.Quit();
     }
 }

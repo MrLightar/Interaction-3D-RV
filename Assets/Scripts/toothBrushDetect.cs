@@ -20,7 +20,13 @@ public class toothBrushDetect : MonoBehaviour
     {
         if(other.tag == "toothBrush")
         {
-            GameManager.Instance.toothWash = true;
+            if(!GameManager.Instance.toothWash)
+            {
+                this.GetComponent<AudioSource>().Play();
+                GameManager.Instance.toothWash = true;
+            }
+            
+
         }
     }
 }
