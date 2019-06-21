@@ -657,6 +657,7 @@ MonoBehaviour:
   coffeeCupPut: 0
   coffeeMade: 0
   toothWash: 0
+  VRCamera: {fileID: 1155443040}
 --- !u!43 &128846626
 Mesh:
   m_ObjectHideFlags: 0
@@ -15261,6 +15262,12 @@ GameObject:
 --- !u!4 &1155443039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4324069419930896990, guid: 8a7d7c5af73c69b45b4dfaceab9b5583,
+    type: 3}
+  m_PrefabInstance: {fileID: 1155443036}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1155443040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4324069419930867322, guid: 8a7d7c5af73c69b45b4dfaceab9b5583,
     type: 3}
   m_PrefabInstance: {fileID: 1155443036}
   m_PrefabAsset: {fileID: 0}
