@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private AudioSource[] audiosources;
     public GameObject VRCamera;
 
+    public GameObject[] breadSlice = new GameObject[2];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,8 @@ public class GameManager : MonoBehaviour
     IEnumerator SecondSound()
     {
         yield return new WaitForSeconds(3.5f);
+        breadSlice[0].SetActive(false);
+        breadSlice[1].SetActive(false);
         audiosources[1].Play(4);
         VRCamera.GetComponent<OVRScreenFade>().FadeIn();
     }

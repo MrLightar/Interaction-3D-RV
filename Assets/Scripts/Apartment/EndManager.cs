@@ -45,6 +45,7 @@ public class EndManager : MonoBehaviour
 
     public void RunEnd()
     {
+        this.GetComponent<AudioSource>().Play();
         onButton.SetActive(false);
         offButton.SetActive(true);
         VRCamera.GetComponent<OVRScreenFade>().FadeOut();

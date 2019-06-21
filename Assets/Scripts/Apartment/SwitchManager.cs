@@ -38,6 +38,7 @@ public class SwitchManager : MonoBehaviour
 
     public void SwitchLight()
     {
+        this.GetComponent<AudioSource>().Play();
         if (IsOn == false)
         {
             foreach (GameObject light in lights)
